@@ -7,15 +7,15 @@
 <body>
     <p th:text="'Hello, ' + ${name} + '!'" />
 
-	<table>
-		<th:block th:each= "vue : $(vuelos)">
-			<tr>
-				<td th:text="$(vue.idVuelo)">...</td>
-				<td th:text="$(vue.pasajeros)">...</td>
-				<td th:text="$(vue.ciudad)">...</td>
-				<td th:text="$(vue.aerolinea)">...</td>
-			</tr>
-		</th:block>
-	</table>
+<table>
+   <th:block th:each="vue : ${vuelos}">
+      <tr>
+         <td th:text="${vue.idVuelo}">...</td>
+         <td th:text="${vue.ciudad}">...</td>
+         <td th:text="${vue.pasajeros}">...</td>
+      </tr>
+     
+   </th:block>
+</table>
    </body>
 </html>
