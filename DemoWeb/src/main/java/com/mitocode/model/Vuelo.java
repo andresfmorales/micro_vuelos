@@ -1,6 +1,8 @@
 package com.mitocode.model;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +10,6 @@ import javax.persistence.Id;
 
 @Entity
 public class Vuelo { //Esta clase hace referencia a las tablas de la base de datos
-
 	@Id
 	private int idVuelo;
 	
@@ -22,10 +23,10 @@ public class Vuelo { //Esta clase hace referencia a las tablas de la base de dat
 	private String ciudad;
 	
 	@Column(name="fecha_salida")
-	private Date fecha_salida;
+	private String fecha_salida;
 		
 	@Column(name="fecha_llegada")
-	private Date fecha_llegada;
+	private String fecha_llegada;
 
 	public int getIdVuelo() {
 		return idVuelo;
@@ -59,19 +60,19 @@ public class Vuelo { //Esta clase hace referencia a las tablas de la base de dat
 		this.ciudad = ciudad;
 	}
 
-	public Date getFecha_salida() {
+	public String getFecha_salida() {
 		return fecha_salida;
 	}
 
-	public void setFecha_salida(Date fecha_salida) {
+	public void setFecha_salida(String fecha_salida) {
 		this.fecha_salida = fecha_salida;
 	}
 
-	public Date getFecha_llegada() {
+	public String getFecha_llegada() {
 		return fecha_llegada;
 	}
 
-	public void setFecha_llegada(Date fecha_llegada) {
+	public void setFecha_llegada(String fecha_llegada) {
 		this.fecha_llegada = fecha_llegada;
 	}
 	

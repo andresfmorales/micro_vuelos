@@ -27,8 +27,8 @@ public class DemoController {
 			v.setPasajeros(199);
 			v.setAerolinea("Emirates");
 			v.setCiudad("Bogota");
-			//v.getFecha_salida("2020-06-04");
-			//v.setFecha_llegada("2020-06-04");
+			v.setFecha_salida("2020/06/04");
+			v.setFecha_llegada("2020-06-04");
 			repo.save(v);
 				
 		model.addAttribute("name", name);
