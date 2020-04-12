@@ -8,11 +8,11 @@
     <p th:text="'Hello, ' + ${name} + '!'" />
 
 <table>
-   <th:block th:each="vue : ${vuelos}">
+   <th:block th:each="per : ${personas}">
       <tr>
-         <td th:text="${vue.idVuelo}">...</td>
-         <td th:text="${vue.ciudad}">...</td>
-         <td th:text="${vue.pasajeros}">...</td>
+         <td th:text="${per.identificacion}">...</td>
+         <td th:text="${per.nombre}">...</td>
+         <td th:text="${per.edad}">...</td>
       </tr>
      
    </th:block>

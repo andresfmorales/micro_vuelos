@@ -12,22 +12,22 @@ import javax.persistence.Id;
 public class Vuelo { //Esta clase hace referencia a las tablas de la base de datos
 	@Id
 	private int idVuelo;
-	
-	@Column(name="aerolinea", length = 12)
-	private String aerolinea;
-	
+		
 	@Column(name="pasajeros")
 	private int pasajeros;
 	
 	@Column(name="ciudad", length = 20)
 	private String ciudad;
-	
-	@Column(name="fecha_salida")
+	@Column(name="fecha_salida", length =10)
 	private String fecha_salida;
 		
-	@Column(name="fecha_llegada")
+	@Column(name="fecha_llegada", length =10)
 	private String fecha_llegada;
 
+
+	@Column(name="aerolinea", length = 12)
+	private String aerolinea;
+	
 	public int getIdVuelo() {
 		return idVuelo;
 	}

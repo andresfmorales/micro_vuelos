@@ -13,23 +13,23 @@ import com.mitocode.repo.IVueloRepo;
 
 @Controller
 public class DemoController {
-	
+
 	@Autowired
-	private IVueloRepo repo;
+	private IPersonaRepo repo;
 
 	
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam(
 			name="name", required=false, defaultValue="World") String name, Model model) {
 		//logica
-			Vuelo v = new Vuelo();
-			v.setIdVuelo(4);
-			v.setPasajeros(199);
-			v.setAerolinea("Emirates");
-			v.setCiudad("Bogota");
-			v.setFecha_salida("2020/06/04");
-			v.setFecha_llegada("2020-06-04");
-			repo.save(v);
+			Persona per = new Persona();
+			per.setIdentificacion("2");
+			per.setNombre("andres");
+			per.setDireccion("casa2");
+			per.setEdad(24);
+			per.setNumero_asiento(21);
+			per.setVuelo_id_vuelo(1);
+			repo.save(per); 	
 				
 		model.addAttribute("name", name);
 		return "greeting"; //nombre de archivo
@@ -38,7 +38,7 @@ public class DemoController {
 	@GetMapping("/listar")
 	public String greeting(Model model) {
 		//logica	
-		model.addAttribute("vuelos", repo.findAll());
+		model.addAttribute("personas", repo.findAll());
 		return "listar"; //nombre de archivo
 	}
 
