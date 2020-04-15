@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mitocode.model.Persona;
-import com.mitocode.model.Vuelo;
 import com.mitocode.repo.IPersonaRepo;
-import com.mitocode.repo.IVueloRepo;
 
 @Controller
 public class DemoController {
@@ -23,7 +21,7 @@ public class DemoController {
 			name="name", required=false, defaultValue="World") String name, Model model) {
 		//logica
 			Persona per = new Persona();
-			per.setIdentificacion("2");
+			per.setId_persona(1234);
 			per.setNombre("andres");
 			per.setDireccion("casa2");
 			per.setEdad(24);

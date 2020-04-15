@@ -1,19 +1,15 @@
-	package com.mitocode.model;
+package com.mitocode.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import org.hibernate.annotations.ForeignKey;
 
 @Entity
 public class Persona { //Esta clase hace referencia a las tablas de la base de datos
-
+	
 	@Id
 	private int id_persona;
-	
-	@Column(name="identificacion", length = 12)
-	private String identificacion;
 	
 	@Column(name="nombre", length = 30)
 	private String nombre;
@@ -36,14 +32,6 @@ public class Persona { //Esta clase hace referencia a las tablas de la base de d
 
 	public void setId_persona(int id_persona) {
 		this.id_persona = id_persona;
-	}
-
-	public String getIdentificacion() {
-		return identificacion;
-	}
-
-	public void setIdentificacion(String identificacion) {
-		this.identificacion = identificacion;
 	}
 
 	public String getNombre() {
