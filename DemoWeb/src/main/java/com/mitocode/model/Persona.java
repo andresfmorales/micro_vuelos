@@ -77,4 +77,3 @@ public class Persona { //Esta clase hace referencia a las tablas de la base de d
 
 			
 }
-

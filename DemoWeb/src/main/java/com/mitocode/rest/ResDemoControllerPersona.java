@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mitocode.model.Persona;
@@ -54,5 +55,10 @@ public class ResDemoControllerPersona {
 	@GetMapping(value = "/buscarId/{id}")
 	public Optional<Persona> buscar(@PathVariable("id") Integer id_persona) {
 		return repo.findById(id_persona);
+	}
+	
+	@GetMapping(value = "/pasajeros/{id}")
+	public List<Persona> buscarPasajeros(@PathVariable("id") Integer id) {
+		return repo.pasajeros(id);
 	}
 }

@@ -1,9 +1,5 @@
 package com.mitocode.model;
 
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -75,7 +71,6 @@ public class Vuelo { //Esta clase hace referencia a las tablas de la base de dat
 	public void setFecha_llegada(String fecha_llegada) {
 		this.fecha_llegada = fecha_llegada;
 	}
-	
 	
 }
 
